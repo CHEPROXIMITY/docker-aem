@@ -19,5 +19,3 @@ RUN apt-get -y update && \
 	apt-get autoclean && apt-get autoremove
 
 ENV JAVA_HOME /usr/bin/java
-
-#CMD ["/bin/bash"]
