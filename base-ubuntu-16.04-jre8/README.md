@@ -9,6 +9,6 @@ Run the following command to build the image:
 `docker build -t <IMAGE-NAME> .`
 
 Run the following command to run the image:
-`docker run -it --name=<CONTAINER-NAME> -v /sys/fs/cgroup:/sys/fs/cgroup:ro --cap-add SYS_ADMIN <IMAGE-NAME>  /bin/bash`
+`docker run -it --name=<CONTAINER-NAME> <IMAGE-NAME>  /bin/bash`
 
 
