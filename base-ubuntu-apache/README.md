@@ -54,7 +54,7 @@ $ docker exec -it <CONTAINER_ID> /bin/bash
 
 ## Test dispatcher
 * Load a server (`ex: http://dev.example.local/content/site/en.html`) that have configured.
-* Tail the dispatcher logs using and see whether there is request entry to the AEM publisher form `4503`.
+* Tail the dispatcher logs using following and see whether there are request entries to the AEM publisher port -> `4503`.
 ```bash
 $ tail -f /var/log/apache2/dispatcher.log
 ```
