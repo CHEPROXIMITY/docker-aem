@@ -8,7 +8,7 @@ The main idea is to keep this image as the base for the AEM dispatcher instances
 ### Virtual Host Files
 * In the `vhosts` folder, check the existing 2 sample virtual host files. Feel free to add more.
 * Update the following `DocumentRoot` folder as well.
-* This folder would mount to the `/etc/apache2/sites-enabled/` folder in the container using the following `docker run ...` command.
+* This folder would mount to the `/etc/apache2/sites-enabled/` folder in the container using the following `docker run ...` command. (Check [How to Run](https://github.com/CHEPROXIMITY/docker-aem/tree/develop/base-ubuntu-apache#how-to-run))
 * So, You can maintain virtual host files from outside the container.
 
 ### Document Root folders (www)
@@ -39,8 +39,14 @@ $ docker build -t <IMAGE-NAME> .
 
 Run the following command to run the image:
 ```bash
-$ docker run -d -p 80:80 -it -v ${PWD}/www:/var/www -v ${PWD}/vhosts:/etc/apache2/sites-enabled/ -v${PWD}/conf:/etc/apache2/conf <IMAGE-NAME>  /bin/bash
+$ docker run -d -p 80:80 \
+    -it \
+    -v ${PWD}/www:/var/www \
+    -v ${PWD}/vhosts:/etc/apache2/sites-enabled/ \
+    -v${PWD}/conf:/etc/apache2/conf \
+    <IMAGE-NAME>  /bin/bash
 ```
+
 
 Login to the container 
 ```bash
