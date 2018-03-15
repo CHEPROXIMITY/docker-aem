@@ -6,32 +6,51 @@ The main idea is to keep this image as the base for the AEM dispatcher instances
 
 ## Prepareing the environment
 ### Virtual Host Files
-1. There are 2 sample virtual host files in the `vhots` folder.
-2. You are free to update them to have you own developmen host names.
-3. Update the following `DocumentRoot` folder as well.
-4. This folder would mount to the `/etc/apache2/sites-enabled/` folder in the container using the following `docker run ...` command.
+* In the `vhosts` folder, check the existing 2 sample virtual host files. Feel free to add more.
+* Update the following `DocumentRoot` folder as well.
+* This folder would mount to the `/etc/apache2/sites-enabled/` folder in the container using the following `docker run ...` command.
+* So, You can maintain virtual host files from outside the container.
 
 ### Document Root folders (www)
-1. This is where you keep the `.htaccess` files.
-2. This folder would mount to the `/var/www` folder in the container using the following `docker run ...` command.
+* This is where you keep the `.htaccess` files.
+* This folder would mount to the `/var/www` folder in the container using the following `docker run ...` command.
+* So, These files also are maintainable from outside the container.
 
 ### `dispatcher.any` file
-1. This file is located in the `conf` folder and you are free to edit.
-2. This `conf` folder would mount with the `/etc/apache2/conf` folder in the container.
+* This file is located in the `conf` folder and you are free to edit.
+* This `conf` folder would mount with the `/etc/apache2/conf` folder in the container.
+* This file also can mainatain from outside.
 
 ### Dispatcher configuration files
-1. The `dispatcher.conf` and `dispatcher.load` configuration files are using to enable dispatcher module to the webserver. They are copying over to the container when the container run.
-2. You are free to change them according to your configuration preferences. 
+* The `dispatcher.conf` and `dispatcher.load` configuration files are using to enable dispatcher module to the webserver. They are copying over to the container when the container run.
+* You are free to change them according to your configuration preferences. 
+
+### Dipatcher Cache
+* The `cache` folder is located in `/opt/aem/dispatcher/cache`.
+
+### Dispatcher Log
+* The log file is `/var/log/apache2/dispatcher.log'. 
 
 ## How to run
 Run the following command to build the image:
-`docker build -t <IMAGE-NAME> .`
-
+```bash
+$ docker build -t <IMAGE-NAME> .
+```
 
 Run the following command to run the image:
-`docker run -d -p 80:80 -it -v ${PWD}/www:/var/www -v ${PWD}/vhosts:/etc/apache2/sites-enabled/ -v${PWD}/conf:/etc/apache2/conf <IMAGE-NAME>  /bin/bash`
+```bash
+$ docker run -d -p 80:80 -it -v ${PWD}/www:/var/www -v ${PWD}/vhosts:/etc/apache2/sites-enabled/ -v${PWD}/conf:/etc/apache2/conf <IMAGE-NAME>  /bin/bash
+```
 
 Login to the container 
-`docker exec -it <CONTAINER_ID> /bin/bash
+```bash
+$ docker exec -it <CONTAINER_ID> /bin/bash
+```
+
+## Test dispatcher
+* Tail the dispatcher logs using:
+```bash
+$ tail -f /var/log/apache2/dispatcher.log
+```
 
 
