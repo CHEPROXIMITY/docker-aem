@@ -47,14 +47,14 @@ $ docker run -d -p 80:80 \
     <IMAGE-NAME>  /bin/bash
 ```
 
-Login to the container 
+To create a new bash session and you are in the container NOW!.
 ```bash
 $ docker exec -it <CONTAINER_ID> /bin/bash
 ```
 
 ## Test dispatcher
 * Load a server (`ex: http://dev.example.local/content/site/en.html`) that have configured.
-* Tail the dispatcher logs using following and see whether there are request entries to the AEM publisher port -> `4503`.
+* Create a new bash session and tail the dispatcher logs using following and see whether there are request entries to the AEM publisher port -> `4503`.
 ```bash
 $ tail -f /var/log/apache2/dispatcher.log
 ```
