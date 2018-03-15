@@ -13,12 +13,12 @@ The main idea is to keep this image as the base for the AEM dispatcher instances
 
 ### Document Root folders (www)
 * This is where you keep the `.htaccess` files.
-* This folder would mount to the `/var/www` folder in the container using the following `docker run ...` command.
+* This folder would mount to the `/var/www` folder in the container using the following `docker run ...` command. (Check [How to Run](https://github.com/CHEPROXIMITY/docker-aem/tree/develop/base-ubuntu-apache#how-to-run))
 * So, These files also are maintainable from outside the container.
 
 ### `dispatcher.any` file
 * This file is located in the `conf` folder and you are free to edit.
-* This `conf` folder would mount with the `/etc/apache2/conf` folder in the container.
+* This `conf` folder would mount with the `/etc/apache2/conf` folder in the container using the following `docker run ...` command.(Check [How to Run](https://github.com/CHEPROXIMITY/docker-aem/tree/develop/base-ubuntu-apache#how-to-run))
 * This file also can mainatain from outside.
 
 ### Dispatcher configuration files
@@ -46,7 +46,6 @@ $ docker run -d -p 80:80 \
     -v${PWD}/conf:/etc/apache2/conf \
     <IMAGE-NAME>  /bin/bash
 ```
-
 
 Login to the container 
 ```bash
