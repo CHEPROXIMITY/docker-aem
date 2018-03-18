@@ -4,7 +4,7 @@ This image includes Ubuntu 16.04 LTS and the Apache/2.4.18 (Ubuntu).
 
 The main idea is to keep this image as the base for the AEM dispatcher instances.
 
-## Prepareing the environment
+## Preparing the environment
 ### Virtual Host Files
 * In the `vhosts` folder, check the existing 2 sample virtual host files. Feel free to add more.
 * Update the following `DocumentRoot` folder as well.
