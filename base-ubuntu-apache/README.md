@@ -1,4 +1,4 @@
-# About this base-ubuntu-apache
+# About this base-ubuntu-apache (Dispatcher)
 This is the repo of the Docker image for AEM dispatcher. See the Docker HUb page for the full readme on  how to use this Docker images.
 This image includes Ubuntu 16.04 LTS and the Apache/2.4.18 (Ubuntu).
 
