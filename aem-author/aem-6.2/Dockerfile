@@ -1,5 +1,4 @@
-FROM cheproximity/aem-author:ubuntu-16.04-java-jre8
-
+FROM cheproximity/aem-base-java:jre-1.8
 LABEL maintainer="hashdev0"
 ENV AEM_XMX_SIZE="1024M"
 

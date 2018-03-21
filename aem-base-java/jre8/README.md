@@ -1,4 +1,4 @@
-# About this base-ubuntu-16.04-jre8
+# About this aem-base-jre8
 This is the repo of the Docker image for AEM. See the Docker HUb page for the full readme on  how to use this Docker images.
 This image includes Ubuntu 16.04 LTS and the Oracle JAVA 1.8(JRE).
 
