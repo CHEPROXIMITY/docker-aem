@@ -1,0 +1,24 @@
+version: "3.3"
+
+services:
+  aem-publisher:
+    image: cheproximity/aem-publisher:aem-6.2
+    ports:
+      - "4503:4503"
+  aem-author:
+    image: cheproximity/aem-author:aem-6.2
+    ports:
+      - "4502:4502"
+  dispatcher:
+    image: cheproximity/aem-dispatcher:apache2.4.18
+    ports: 
+      - "8080:80"
+    depends_on:
+      - aem-publisher
+    environment:
+      - "APACHE_LOG_DIR=/var/logs/apache2"
+    volumes:
+      - ./www:/var/www
+      - ./vhosts:/etc/apache2/sites-enabled
+      - ./conf:/etc/apache2/conf
+      - ./logs:/var/logs/apache2/
