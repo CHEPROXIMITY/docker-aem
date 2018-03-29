@@ -5,4 +5,4 @@ Repository to maintain all the AEM related Dockerfile(s) and includes the follow
 01. AEM author instance(s) - [aem-author-6.2](https://github.com/CHEPROXIMITY/docker-aem/tree/develop/aem-author)
 02. Java base instance(s)  - [aem-base-java](https://github.com/CHEPROXIMITY/docker-aem/tree/develop/aem-base-java)
 03. Dispatcher instance(s) - [aem-dispatcher](https://github.com/CHEPROXIMITY/docker-aem/tree/develop/aem-dispatcher)
-04. AEM publish instance - Coming soon.
+04. AEM publish instance - [aem-dispatcher](https://github.com/CHEPROXIMITY/docker-aem/tree/develop/aem-publisher)
