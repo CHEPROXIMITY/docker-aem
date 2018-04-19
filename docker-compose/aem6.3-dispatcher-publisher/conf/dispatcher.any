@@ -35,7 +35,7 @@
         # Hostname or IP of the render
         /hostname "aem6.3-publisher"
         # Port of the render
-        /port "4505"
+        /port "4503"
         # Connect timeout in milliseconds, 0 to wait indefinitely
         # /timeout "0"
         }

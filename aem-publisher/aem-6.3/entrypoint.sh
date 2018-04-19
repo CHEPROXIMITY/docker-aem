@@ -3,4 +3,4 @@
 set -e
 
 #Run the following command after docker is run, Cheers.
-java -Xmx"$AEM_XMX_SIZE" -jar aem-publish-4503.jar  -nobrowser
+java -server -XX:MaxPermSize=1024M -Xmx2048m -jar aem-publish-4503.jar  -nobrowser
