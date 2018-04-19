@@ -1,0 +1,9 @@
+version: "3.3"
+
+services:
+  aem6.3-author:
+    image: cheproximity/aem-author:aem-6.3
+    ports:
+      - "4502:4502"
+    volumes:
+      - ./logs:/opt/aem/author/crx-quickstart/logs
