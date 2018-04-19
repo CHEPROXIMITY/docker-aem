@@ -11,7 +11,7 @@ This image includes AEM 6.x (author instance), Ubuntu 16.04 LTS and the Oracle J
 `docker run -p 4502:4502 -it --name=<CONTAINER-NAME> -v ${PWD}/license.properties:/opt/aem/author/license.properties <IMAGE-NAME>  /bin/bash`
 
 
-## Test AEM 6.2 server running
+## Test AEM 6.3 server running
 
 The `entrypoint.sh` shell script will be executed when docker container run and the AEM author instance is ready to go.
 

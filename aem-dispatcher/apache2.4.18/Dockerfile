@@ -8,7 +8,8 @@ RUN echo '******* Installing APACHE 2.4 *********'
 #Install Apache and enable Rewrite module
 RUN apt-get update -y && \
 	apt-get -y install apache2 vim curl && \
-	a2enmod rewrite
+	a2enmod rewrite && \
+	a2enmod headers
 	
 # Manually set up the apache environment variables
 ENV APACHE_RUN_USER www-data
