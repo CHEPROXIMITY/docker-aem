@@ -1,5 +1,5 @@
 # About this aem-dispatcher
-This is the repo of the Docker image for AEM dispatcher. See the Docker HUb page for the full readme on  how to use this Docker images.
+This is the repo of the Docker image for AEM dispatcher. See the Docker [hub page](https://hub.docker.com/r/cheproximity/aem-dispatcher/) for the full readme on  how to use this Docker images.
 This image includes Ubuntu 16.04 LTS and the Apache/2.4.18 (Ubuntu).
 
 The main idea is to keep this image as the base for the AEM dispatcher instances.
