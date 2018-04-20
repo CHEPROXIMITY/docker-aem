@@ -1,5 +1,5 @@
 # About this aem-author-6.x
-This is the repo of the docker image for AEM author. See the Docker [hub page]() for the full readme on  how to use this Docker images.
+This is the repo of the docker image for AEM author. See the Docker [hub page](https://hub.docker.com/r/cheproximity/aem-author/) for the full readme on  how to use this Docker images.
 This image includes AEM 6.x (author instance), Ubuntu 16.04 LTS and the Oracle JAVA 1.8(JRE).
 
 ## Setup to Run

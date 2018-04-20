@@ -1,5 +1,5 @@
 # About this aem-base-jre8
-This is the repo of the Docker image for AEM. See the Docker HUb page for the full readme on  how to use this Docker images.
+This is the repo of the Docker image for AEM. See the Docker [hub page](https://hub.docker.com/r/cheproximity/aem-base-java/) for the full readme on  how to use this Docker images.
 This image includes Ubuntu 16.04 LTS and the Oracle JAVA 1.8(JRE).
 
 The main idea is to keep this image as the base for the AEM instances.
