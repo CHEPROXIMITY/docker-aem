@@ -1,6 +1,6 @@
-# About this aem6.3-author
+# About this aem6.4-dispatcher-publisher
 This is the document for about this `docker-compose`.
-Make sure to change the port if you are using multiple AEM containers.
+Make sure to change the ports if you are using multiple AEM containers.
 
 ## To Run
 To run the `docker-compose`
@@ -12,6 +12,7 @@ docker-compose up
 To run the `docker-compose` in background
 
 ```bash
-dock
+docker-compose up -d
+```
 
 

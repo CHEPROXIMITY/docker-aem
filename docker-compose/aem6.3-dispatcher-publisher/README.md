@@ -1,5 +1,6 @@
-# About this aem6.2-dispatcher-publisher
+# About this aem6.3-dispatcher-publisher
 This is the document for about this `docker-compose`.
+Make sure to change the ports if you are using multiple AEM containers.
 
 ## To Run
 To run the `docker-compose`
