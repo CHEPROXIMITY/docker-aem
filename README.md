@@ -13,5 +13,8 @@ Repository to maintain all the AEM related Dockerfile(s) and includes the follow
 The current docker-compose section includes 'docker-compose' setup for 
 - AEM 6.2(author/publisher/dispather) - [aem6.2-dispatcher-publisher](https://github.com/CHEPROXIMITY/docker-aem/tree/master/docker-compose/aem6.2-dispatcher-publisher)
 - AEM 6.3 (author/publisher/dispatcher) - [aem6.3-dispatcher-publisher](https://github.com/CHEPROXIMITY/docker-aem/tree/master/docker-compose/aem6.3-dispatcher-publisher)
+- AEM 6.4 (author/publisher/dispatcher) - [aem6.4-dispatcher-publisher](https://github.com/CHEPROXIMITY/docker-aem/tree/master/docker-compose/aem6.4-dispatcher-publisher)
 - AEM 6.2 Author - [aem6.2-author](https://github.com/CHEPROXIMITY/docker-aem/tree/master/docker-compose/aem6.2-author)
 - AEM 6.3 Author - [aem6.3-author](https://github.com/CHEPROXIMITY/docker-aem/tree/master/docker-compose/aem6.3-author)
+- AEM 6.4 Author - [aem6.4-author](https://github.com/CHEPROXIMITY/docker-aem/tree/master/docker-compose/aem6.4-author)
+
