@@ -1,6 +1,6 @@
 # About this aem-publish-6.x
-This is the repo of the docker image for AEM publisher. See the Docker [hub page](https://hub.docker.com/r/cheproximity/aem-publisher/) for the full readme on  how to use this Docker images.
-The image creating includes AEM 6.x (publish instance), Ubuntu 16.04 LTS and the Oracle JAVA 1.8(JRE).
+This is the repo of the docker image for AEM publisher. See the Docker [hub page](https://hub.docker.com/r/cheproximity/aem-publish/) for the full readme on  how to use this Docker images.
+This image includes AEM 6.x (publisher instance), Ubuntu 16.04 LTS and the Oracle JAVA 1.8(JRE).
 
 ## Setup to Run
 1. Place the AEM JAR package to the current folder and rename it to `aem-publish-4503.jar` as it's refference to the Dockerfile.
@@ -10,7 +10,8 @@ The image creating includes AEM 6.x (publish instance), Ubuntu 16.04 LTS and the
 4. Run the following command to run the created image:
 `docker run -p 4503:4503 -it --name=<CONTAINER-NAME> -v ${PWD}/license.properties:/opt/aem/publish/license.properties <IMAGE-NAME>  /bin/bash`
 
-## Test AEM 6.x server running
+
+## Test AEM 6.4 server running
 
 The `entrypoint.sh` shell script will be executed when docker container run and the AEM publisher instance is ready to go.
 
@@ -29,7 +30,7 @@ Will fork a JVM to get enough memory.
 ********************************************************************************
 Available memory below specified limits and low-memory action set to fork, will fork to get enough memory
 Preparing to fork JVM, OS name=Linux, isWindows=false
-Forking JVM: [/usr/lib/jvm/java-8-oracle/jre/bin/java, -Xmx1024m, -XX:MaxPermSize=256m, -jar, /opt/aem/publish/aem-publish-4503.jar, -nofork, -pt, CHILD, -nobrowser]
+Forking JVM: [/usr/lib/jvm/java-8-oracle/jre/bin/java, -Xmx1024m, -XX:MaxPermSize=256m, -jar, /opt/aem/publish/aem-publish-4502.jar, -nofork, -pt, CHILD, -nobrowser]
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
 Loading quickstart properties: default
 Loading quickstart properties: instance
