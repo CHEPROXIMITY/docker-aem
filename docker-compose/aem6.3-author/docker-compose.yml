@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.4"
 
 services:
   aem6.3-author:
@@ -7,3 +7,7 @@ services:
       - "4502:4502"
     volumes:
       - ./logs:/opt/aem/author/crx-quickstart/logs
+      - authorRepo:/opt/aem/author/crx-quickstart/repository
+  volumes:
+    authorRepo:
+      name: 6-3-author-repo
