@@ -15,7 +15,7 @@ To run the services in background
 docker-compose up -d
 ```
 
-To down/kill services, run the followin
+To down/kill services, run the following
 ```bash
 docker-compose down
 ```
