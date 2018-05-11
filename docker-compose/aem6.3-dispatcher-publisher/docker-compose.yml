@@ -1,24 +1,39 @@
-version: "3.3"
+version: "3.4"
 
 services:
-  aem6.3-publisher:
-    image: cheproximity/aem-publisher:aem-6.3
-    ports:
-      - "4503:4503"
-  aem6.3-author:
-    image: cheproximity/aem-author:aem-6.3
-    ports:
-      - "4502:4502"
-  dispatcher-aem6.3:
-    image: cheproximity/aem-dispatcher:apache2.4.18
-    ports: 
-      - "8080:80"
-    depends_on:
-      - aem6.3-publisher
-    environment:
-      - "APACHE_LOG_DIR=/var/log/apache2"
-    volumes:
-      - ./www:/var/www
-      - ./vhosts:/etc/apache2/sites-enabled
-      - ./conf:/etc/apache2/conf
-      - ./logs:/var/log/apache2/
+  aem6_3_publisher:
+      image: cheproximity/aem-publisher:aem-6.3
+      container_name: my-aem6_3-publisher
+      ports:
+        - "4503:4503"
+      volumes:
+        - ./publishLogs:/opt/aem/publish/crx-quickstart/logs:delegated
+        - publishRepo:/opt/aem/publish/crx-quickstart/repository
+    aem6_3_author:
+      image: cheproximity/aem-author:aem-6.3
+      container_name: my-aem6_3-author
+      ports:
+        - "4502:4502"
+      volumes:
+        - ./authorLogs:/opt/aem/author/crx-quickstart/logs:delegated
+        - authorRepo:/opt/aem/author/crx-quickstart/repository
+    dispatcher_aem6_3:
+      image: cheproximity/aem-dispatcher:apache2.4.18
+      container_name: my-aem6-3-dispatcher
+      ports:
+        - "8080:80"
+      depends_on:
+        - aem6_3_publisher
+      environment:
+        - "APACHE_LOG_DIR=/var/log/apache2"
+      volumes:
+        - ./www:/var/www
+        - ./vhosts:/etc/apache2/sites-enabled
+        - ./conf:/etc/apache2/conf
+        - ./logs:/var/log/apache2/
+        - ./cache:/opt/aem/dispatcher/cache
+  volumes:
+    publishRepo:
+      name: 6-3-publish-repo
+    authorRepo:
+      name: 6-3-author-repo
